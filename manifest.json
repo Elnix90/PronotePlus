@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Block Pronote Picture",
+  "version": "1.0",
+  "description": "Block the profile picture on Pronote",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "blockpronotepicture@elnix.com"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://0900004r.index-education.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://0900004r.index-education.net/pronote/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
