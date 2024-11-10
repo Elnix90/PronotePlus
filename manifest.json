@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Block Pronote Picture",
+  "name": "pronote Plus",
   "version": "1.0",
-  "description": "Block the profile picture on Pronote",
+  "description": "Ajoute des fonctionnalités sur le site Pronote",
   "browser_specific_settings": {
     "gecko": {
       "id": "pronote@plus.com"
