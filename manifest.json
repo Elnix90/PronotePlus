@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "pronote Plus",
+  "name": "Pronote Plus",
   "version": "1.0",
   "description": "Ajoute des fonctionnalités sur le site Pronote",
   "browser_specific_settings": {
     "gecko": {
-      "id": "pronote@plus.com"
+      "id": "pronoteplus@addon.firefox.com"
     }
   },
   "permissions": [

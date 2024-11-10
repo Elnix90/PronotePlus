@@ -10,32 +10,28 @@ function blockImage() {
   }
 }
 
-// Créer un MutationObserver pour surveiller les ajouts dans le DOM
 const observer = new MutationObserver(() => {
-  if (isBlocking) {
-    blockImage();
-  }
+  blockImage();
 });
 
-// Observer les changements dans le corps de la page
 observer.observe(document.body, {
   childList: true,
   subtree: true
 });
 
-// Charger l'état initial
-browser.storage.sync.get('blocking', function(data) {
-  isBlocking = data.blocking !== undefined ? data.blocking : true;
+
+browser.runtime.sendMessage({action: "getState"}, function(response) {
+  isBlocking = response.blocking;
   blockImage();
 });
 
-// Écouter les messages du popup
+
 browser.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.action === "toggleBlocking") {
+  if (request.action === "updateState") {
     isBlocking = request.blocking;
     blockImage();
   }
 });
 
-// Bloquer l'image immédiatement au cas où elle est déjà présente
+
 blockImage();
