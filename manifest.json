@@ -5,7 +5,7 @@
   "description": "Block the profile picture on Pronote",
   "browser_specific_settings": {
     "gecko": {
-      "id": "blockpronotepicture@elnix.com"
+      "id": "pronote@plus.com"
     }
   },
   "permissions": [
