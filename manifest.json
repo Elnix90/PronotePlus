@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Block Pronote Picture",
   "version": "1.0",
   "description": "Block the profile picture on Pronote",
@@ -10,9 +10,8 @@
   },
   "permissions": [
     "activeTab",
-    "storage"
-  ],
-  "host_permissions": [
+    "storage",
+
     "https://0900004r.index-education.net/*"
   ],
   "content_scripts": [
@@ -22,7 +21,7 @@
       "run_at": "document_end"
     }
   ],
-  "action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon16.png",
